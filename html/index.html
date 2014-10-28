@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="RedditApp">
+    <head>
+        <title>Reddit Search & Share</title>
+
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="../css/jquery-ui-1.10.4.min.css">
+
+
+        <link href='http://fonts.googleapis.com/css?family=Exo:400,700' rel='stylesheet' type='text/css'>
+        <script src="../js/Plugins/ThirdParty/modernizr-2.6.2.min.js"></script>
+
+    </head>
+    <body>
+    <div ng-controller="RedditCtrl" ng-cloak>
+        <div id="header" class="headerContentWrap">
+            <div class="header">
+                <div class="logo">Reddit</div>
+                <form class="searchForm" ng-submit="searchReddit()">
+                    <input id="searchBox" type="text" class="searchTextBox" ng-model="searchTerm" expand-To="250px" ng-value="searchTerm">
+                </form>
+            </div>
+        </div>
+
+        <div class="content">
+            <img src="../img/loader.gif" style="margin-left: 44%; margin-top: 7%;" ng-show="IsLoading">
+            <div class="postBlock" ng-repeat="post in posts" ng-click="openModal(post)">
+                <div class="imgBlock">
+                    <img class="circularImage" ng-src="{{post.data.thumbnail === 'default' || post.data.thumbnail === 'undefined' || post.data.thumbnail === '' ? '../img/unknown.png': post.data.thumbnail}}">
+                </div>
+                <div class="messageContent">
+                    <div class="author" >{{post.data.author}}</div>
+                    <div class="title">{{post.data.title}}</div>
+                    <div class="stats">
+                        <img class="comment" ng-src="../img/icon-trans.png"> {{post.data.num_comments}} comments
+                        <img class="down" ng-src="../img/icon-trans.png"> {{post.data.ups}} ups
+                        <img class="up" ng-src="../img/icon-trans.png"> {{post.data.downs}} downs
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="../js/Plugins/ThirdParty/jquery-1.10.2.min.js"></script>
+        <script src="../js/Plugins/ThirdParty/jquery-ui-1.10.4.min.js"></script>
+        <script src="../js/Plugins/ThirdParty/angular.js"></script>
+        <script src="../js/Plugins/ThirdParty/angular-animate.js"></script>
+        <script src="../js/Plugins/ThirdParty/lo-dash.js"></script>
+        <script src="../js/Plugins/ThirdParty/ui-bootstrap-tpls-0.10.0.js"></script>
+
+        <script src="../js/Modules/ModularSupport.js"></script>
+        <script src="../js/Modules/RedditApp.js"></script>
+
+        <script src="../js/Controllers/RedditCtrl.js"></script>
+
+        <script src="../js/Services/RedditService.js"></script>
+
+        <script src="../js/Directives/InputResizer.js"></script>
+        <script src="../js/Directives/ThirdParty/angular-dragdrop.min.js"></script>
+
+    </div>
+    </body>
+</html>

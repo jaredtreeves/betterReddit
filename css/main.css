@@ -1,0 +1,278 @@
+html{
+    font-family: 'Exo', sans-serif; !important
+}
+
+body{
+    background-color: seashell;
+
+}
+
+.header{
+    background: #00B5FD;
+    top:0px;
+    margin: 0;
+    width:70%;
+    margin: 0px auto 20px;
+    padding: 20px 25px 10px 25px;
+    z-index: 500;
+}
+
+.headerContentWrap{
+    background: #00B5FD;
+    width: 100%;
+    position:fixed;
+    top:0px;
+    z-index: 500;
+}
+
+.logo{
+     font-size: 30px;
+     font-weight: bold;
+     color: white;
+     display:inline;
+ }
+
+.searchForm{
+    float:right;
+    margin-right: inherit;
+}
+
+.searchTextBox{
+    margin: 0px;
+    padding: 5px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #00B5FD;
+    border: 1px solid #00B5FD;
+    border-radius: 15px;
+}
+
+.content{
+    position: relative;
+    width: 70%;
+    height: auto;
+    margin: 85px auto;
+}
+
+.circularImage{
+    width:90px;
+    height:90px;
+    border-radius: 45px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    display:inline;
+    margin-left: 5px;
+}
+.circularImageModal{
+    width:90px;
+    height:90px;
+    border-radius: 45px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    display:inline;
+    margin-left: 32%;
+    margin-top: 5%;
+    margin-bottom: 4%;
+}
+
+.imgBlock {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+    width: 10%
+}
+
+.postBlock{
+    border-bottom-style: groove;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    width: 100%;
+    display: table
+}
+
+.postBlock:hover{
+    background-color: white;
+}
+
+.messageContent {
+   display: table-cell;
+   padding-left: 50px;
+}
+
+.author{
+    font-size: 20px;
+    font-weight: bold;
+    color: #00B5FD;
+    padding-bottom: 7px;
+}
+
+.title{
+    font-size: 22px;
+    padding-bottom: 0.7%;
+}
+
+.stats{
+    font-size: 14px;
+}
+
+.authorModal{
+    font-size: 20px;
+    font-weight: bold;
+    color: #00B5FD;
+    padding-bottom: 7px;
+    text-align: center;
+}
+
+.titleModal{
+    font-size: 22px;
+    padding-bottom: 3%;
+    margin-left: 4%;
+    margin-right: 4%;
+    text-align: center;
+}
+
+.statsModal{
+    font-size: 14px;
+    padding-bottom: 4%;
+    padding-right: 1%;
+    padding-left: 3%;
+    text-align: center;
+}
+
+.modalPostSide{
+    display: inline-block;
+    width: 50%;
+    height: auto;
+}
+
+.modalPost{
+    background-color: white;
+    border-radius: 15px;
+    margin-right: 10%;
+    margin-left: 40%;
+    margin-top: 15%;
+}
+
+.modalCommandSide {
+    display: inline-block;
+    width: 50%;
+    height: auto;
+    float: right;
+}
+
+.redditOpen{
+    margin-top: 15%;
+    background-color: white;
+    border-radius: 15px;
+    padding: 4px 9px 4px 9px;
+}
+
+.redditEmail{
+    display:block;
+    margin-right: 30%;
+    margin-top: 8%;
+    padding: 7px 6px 4px 6px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.dialogLabel{
+    padding-bottom: 6%;
+    font-size: 18px;
+    color:#00B5FD;
+    font-weight: bold;
+}
+
+img.reddit{
+    padding: 25px 25px 6px 70px;
+}
+
+img.email{
+    padding: 25px 0 6px 86px;
+}
+
+img.comment{
+    width:16px;
+    height: 16px;
+    border-style: none;
+    background:url("../img/icon-sprite.png")0px 48px;
+
+}
+
+img.up{
+    width:16px;
+    height: 16px;
+    border-style: none;
+    background:url("../img/icon-sprite.png")0px 16px;
+}
+
+img.down{
+    width:16px;
+    height: 16px;
+    border-style: none;
+    background:url("../img/icon-sprite.png")0px 32px;
+}
+
+
+
+
+
+/*a better thematic break */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+/*Styles for hidden*/
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+@media(max-width:699px) and (min-width: 520px){
+    @-viewport{
+        width: 640px
+    }
+}
+
+/*----------This is needed for angular asi it should reduce template flashes-------------*/
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+

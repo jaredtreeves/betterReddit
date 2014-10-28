@@ -1,0 +1,32 @@
+<div>
+        <div class="modal-bodyRiddit">
+            <div class="modalCommandSide">
+
+                <button type="button" class="redditOpen" ng-click="openLink(post.data.url)" >
+                    <img src="../img/reddit-logo.png">
+                    <div class="dialogLabel">Open on Reddit</div>
+                </button>
+                <button type="button" class="redditEmail" ng-click="emailLink()">
+                    <img src="../img/mail-logo.png">
+                    <div class="dialogLabel">Email to a Friend</div>
+                </button>
+            </div>
+
+            <div class="modalPostSide ">
+                <div class="modalPost" ng-model="posts">
+
+                    <img class="circularImageModal" ng-src="{{post.data.thumbnail === 'default' ||
+                                                              post.data.thumbnail === 'undefined' ||
+                                                              post.data.thumbnail === ''  ? '../img/unknown.png': post.data.thumbnail}}">
+
+                    <div class="authorModal">{{post.data.author}}</div>
+                    <div class="titleModal">{{post.data.title}}</div>
+                    <div class="statsModal">
+                        <img class="comment" ng-src="../img/icon-trans.png"> {{post.data.num_comments}}
+                        <img class="down" ng-src="../img/icon-trans.png"> {{post.data.ups}}
+                        <img class="up" ng-src="../img/icon-trans.png"> {{post.data.downs}}
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
